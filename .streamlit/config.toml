@@ -1,0 +1,48 @@
+[theme]
+# Primary color
+primaryColor = "#3498db"
+
+# Background color
+backgroundColor = "#ffffff"
+
+# Secondary background color
+secondaryBackgroundColor = "#f0f2f6"
+
+# Text color
+textColor = "#262730"
+
+# Font
+font = "sans serif"
+
+[server]
+# Port
+port = 8501
+
+# Enable CORS
+enableCORS = false
+
+# Enable XSRF protection
+enableXsrfProtection = true
+
+# Max upload size (MB)
+maxUploadSize = 200
+
+# Enable websocket compression
+enableWebsocketCompression = true
+
+[browser]
+# Gather usage stats
+gatherUsageStats = false
+
+# Server address
+serverAddress = "localhost"
+
+# Server port
+serverPort = 8501
+
+[runner]
+# Faster rerun
+fastReruns = true
+
+# Magic enabled
+magicEnabled = true
