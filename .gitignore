@@ -210,3 +210,4 @@ __marimo__/
 
 data/sentiment140.csv
 data/sentiment140_cleaned.csv
+models/
