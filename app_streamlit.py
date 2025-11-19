@@ -179,7 +179,7 @@ if page=="Home":
     
     c1,c2,c3 = st.columns(3)
     with c1:
-        st.metric("Accuracy","77.83%")
+        st.metric("Accuracy","78.46%")
     with c2:
         st.metric("Average Confidence","< 100%")
     with c3:
@@ -447,9 +447,11 @@ elif page=="About":
     st.markdown("---")
     st.subheader("📊 Model Performance (Test Dataset)")
     
-    metrics_df=pd.DataFrame([
-        {"Model":"Logistic Regression","Accuracy":"77.83%","Precision":"76.72%","Recall":"79.90%","F1-Score":"78.28%","ROC-AUC":"0.859"},
-        {"Model":"Naive Bayes","Accuracy":"76.01%","Precision":"76.14%","Recall":"75.75%","F1-Score":"75.95%","ROC-AUC":"0.843"}
+    metrics_df = pd.DataFrame([
+    {"Model": "Naive Bayes", "Accuracy": "76.52%", "Precision": "76.52%", "Recall": "76.52%", "F1-Score": "76.52%", "ROC-AUC": "0.848"},
+    {"Model": "Logistic Regression", "Accuracy": "78.46%", "Precision": "77.39%", "Recall": "80.41%", "F1-Score": "78.87%", "ROC-AUC": "0.866"},
+    {"Model": "Voting Ensemble", "Accuracy": "78.38%", "Precision": "77.24%", "Recall": "80.45%", "F1-Score": "78.82%", "ROC-AUC": "0.784"},
+    {"Model": "Stacking Ensemble", "Accuracy": "78.41%", "Precision": "77.51%", "Recall": "80.04%", "F1-Score": "78.75%", "ROC-AUC": "0.865"}
     ])
     st.dataframe(metrics_df.set_index('Model'), use_container_width=True)
     
@@ -470,7 +472,7 @@ elif page=="About":
 st.markdown("---")
 f1,f2,f3=st.columns(3)
 with f1:
-    st.markdown("**Accuracy:** 77.83%")
+    st.markdown("**Accuracy:** 78.46%")
 with f2:
     st.markdown("**Model:** Logistic Regression")
 with f3:
