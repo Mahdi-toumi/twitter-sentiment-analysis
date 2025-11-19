@@ -162,6 +162,8 @@ def lemmatize_words(tokens):
 # ---------------------------
 
 def clean_tweet(text):
+    if not isinstance(text, str):
+        return ""
     text = map_emojis(text)
     text = normalize_slang(text)
     text = reduce_repetitions(text)

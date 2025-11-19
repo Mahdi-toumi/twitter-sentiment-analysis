@@ -31,7 +31,6 @@ def check_data():
     """Check if data file exists"""
     data_paths = [
         'data/sentiment140_cleaned.csv',
-        'data/sentiment140.csv'
     ]
     
     for path in data_paths:
@@ -131,7 +130,10 @@ def main():
         nb_model, lr_model, extractor, results = train_full_pipeline(
             data_path=data_path,
             sample_size=sample_size,
-            test_size=0.2
+            test_size=0.2,
+            use_hyperparameter_tuning=True,  # Set True for tuning (adds 5-60 min)
+            use_ensemble=True,  # Train ensemble models
+            quick_tuning=False  # Quick tuning if enabled
         )
         
         print("\n" + "="*80)
